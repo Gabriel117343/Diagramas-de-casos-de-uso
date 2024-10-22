@@ -1,0 +1,847 @@
+<html>
+    <head>
+        <title>Diccionario de Datos</title>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+
+            table, th, td {
+                border: 1px solid black;
+            }
+
+            th, td {
+                padding: 15px;
+                text-align: left;
+            }
+
+            table#t01 tr:nth-child(even) {
+                background-color: #eee;
+            }
+
+            table#t01 tr:nth-child(odd) {
+                background-color: #fff;
+            }
+
+            table#t01 th {
+                background-color: #f1f1c1;
+            }
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f0f0f0;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <h1>Diccionario de Datos</h1>
+        <h2>Tabla: Archivo</h2>
+        <p>Descripcion: </p>
+        <table border='1'>
+            <tr><th>Nombre</th><th>Tipo de
+                    Dato</th><th>Longitud</th><th>Nulo</th><th>Clave
+                    Primaria</th><th>Clave Foranea</th><th>Descripcion</th></tr>
+            <tr>
+                <td>id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>descripcion</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+        </table>
+        <h2>Tabla: Nota</h2>
+        <p>Descripcion: </p>
+        <table border='1'>
+            <tr><th>Nombre</th><th>Tipo de
+                    Dato</th><th>Longitud</th><th>Nulo</th><th>Clave
+                    Primaria</th><th>Clave Foranea</th><th>Descripcion</th></tr>
+            <tr>
+                <td>id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>fecha</td>
+                <td>DATE</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>autor</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>contenido</td>
+                <td>TEXT</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>investigacion_id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+        </table>
+        <h2>Tabla: Evidencia</h2>
+        <p>Descripcion: </p>
+        <table border='1'>
+            <tr><th>Nombre</th><th>Tipo de
+                    Dato</th><th>Longitud</th><th>Nulo</th><th>Clave
+                    Primaria</th><th>Clave Foranea</th><th>Descripcion</th></tr>
+            <tr>
+                <td>id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>codigo</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>descripcion</td>
+                <td>TEXT</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>tipo</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>fechaCreacion</td>
+                <td>DATE</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>estado</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ubicacionFisica</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>archivo_id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>investigador_id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>investigacion_id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+        </table>
+        <h2>Tabla: Investigacion</h2>
+        <p>Descripcion: </p>
+        <table border='1'>
+            <tr><th>Nombre</th><th>Tipo de
+                    Dato</th><th>Longitud</th><th>Nulo</th><th>Clave
+                    Primaria</th><th>Clave Foranea</th><th>Descripcion</th></tr>
+            <tr>
+                <td>id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>codigo</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>titulo</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>tipo</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>estado</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>fechaInicio</td>
+                <td>DATE</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>fechaCierre</td>
+                <td>DATE</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>archivo_id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+        </table>
+        <h2>Tabla: Delito</h2>
+        <p>Descripcion: </p>
+        <table border='1'>
+            <tr><th>Nombre</th><th>Tipo de
+                    Dato</th><th>Longitud</th><th>Nulo</th><th>Clave
+                    Primaria</th><th>Clave Foranea</th><th>Descripcion</th></tr>
+            <tr>
+                <td>id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>codigo</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>tipo</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>descripcion</td>
+                <td>TEXT</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>estado</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>fechaRegistro</td>
+                <td>DATE</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>fechaConclusion</td>
+                <td>DATE</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>investigacion_id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+        </table>
+        <h2>Tabla: Usuario</h2>
+        <p>Descripcion: </p>
+        <table border='1'>
+            <tr><th>Nombre</th><th>Tipo de
+                    Dato</th><th>Longitud</th><th>Nulo</th><th>Clave
+                    Primaria</th><th>Clave Foranea</th><th>Descripcion</th></tr>
+            <tr>
+                <td>id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>imagen</td>
+                <td>BLOB</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nombre</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>apellido</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>rut</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>password</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>telefono</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>rol</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>jornadaInicio</td>
+                <td>TIME</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>jornadaFin</td>
+                <td>TIME</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>estado</td>
+                <td>BOOLEAN</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>observacion</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>direccion</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>ultimaActividad</td>
+                <td>DATE</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+        </table>
+        <h2>Tabla: Investigador</h2>
+        <p>Descripcion: </p>
+        <table border='1'>
+            <tr><th>Nombre</th><th>Tipo de
+                    Dato</th><th>Longitud</th><th>Nulo</th><th>Clave
+                    Primaria</th><th>Clave Foranea</th><th>Descripcion</th></tr>
+            <tr>
+                <td>id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>credencial</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>especializacion</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>rango</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>fechaIngreso</td>
+                <td>DATE</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>usuario_id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+        </table>
+        <h2>Tabla: Auditor</h2>
+        <p>Descripcion: </p>
+        <table border='1'>
+            <tr><th>Nombre</th><th>Tipo de
+                    Dato</th><th>Longitud</th><th>Nulo</th><th>Clave
+                    Primaria</th><th>Clave Foranea</th><th>Descripcion</th></tr>
+            <tr>
+                <td>id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>numeroRegistro</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>organismoCertificador</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>fechaCertificacion</td>
+                <td>DATE</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>especializacion</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>usuario_id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+        </table>
+        <h2>Tabla: Administrador</h2>
+        <p>Descripcion: </p>
+        <table border='1'>
+            <tr><th>Nombre</th><th>Tipo de
+                    Dato</th><th>Longitud</th><th>Nulo</th><th>Clave
+                    Primaria</th><th>Clave Foranea</th><th>Descripcion</th></tr>
+            <tr>
+                <td>id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>nivelAcceso</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>departamento</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>fechaAsignacion</td>
+                <td>DATE</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>usuario_id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+        </table>
+        <h2>Tabla: Actividad</h2>
+        <p>Descripcion: </p>
+        <table border='1'>
+            <tr><th>Nombre</th><th>Tipo de
+                    Dato</th><th>Longitud</th><th>Nulo</th><th>Clave
+                    Primaria</th><th>Clave Foranea</th><th>Descripcion</th></tr>
+            <tr>
+                <td>id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>codigo</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>fecha</td>
+                <td>DATE</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>usuario_id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>accion</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>descripcion</td>
+                <td>LONGTEXT</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>elementoAsociado</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>critico</td>
+                <td>BOOLEAN</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>estado</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+        </table>
+        <h2>Tabla: Notificacion</h2>
+        <p>Descripcion: </p>
+        <table border='1'>
+            <tr><th>Nombre</th><th>Tipo de
+                    Dato</th><th>Longitud</th><th>Nulo</th><th>Clave
+                    Primaria</th><th>Clave Foranea</th><th>Descripcion</th></tr>
+            <tr>
+                <td>id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>tipo</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>prioridad</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>mensaje</td>
+                <td>VARCHAR(255)</td>
+                <td>255</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>fecha</td>
+                <td>DATE</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>leida</td>
+                <td>BOOLEAN</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>usuario_id</td>
+                <td>INT</td>
+                <td>0</td>
+                <td>Falso</td>
+                <td>Falso</td>
+                <td>Verdadero</td>
+                <td></td>
+            </tr>
+        </table>
+    </body>
+</html>

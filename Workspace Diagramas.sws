@@ -6,6 +6,7 @@
 	<Local Expanded="Yes">
 		<Model Expanded="Yes" ID="{B55E4075-D551-43EF-A1E7-90888814E550}" Loaded="No" Name="Sistema de Información Criminal de Arica (SICA)" Type="{DABA1E0A-0922-4B05-B7F0-B0BD7A73FD33}" URL="Sistema de Información Criminal de Arica (SICA) 5.0.rqm"/>
 		<Model Expanded="Yes" ID="{6035FB36-968F-4752-BA8E-D0213C092427}" Name="UML" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="UML.oom"/>
+		<Model ID="{74731F0B-2BEE-4FFE-96A3-86F67548313B}" Name="LogicalDataModel" Type="{5F45F978-C4F3-4E35-A3FC-AF3318663A0F}" URL="LogicalDataModel.ldm"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>
